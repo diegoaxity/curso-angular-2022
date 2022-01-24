@@ -1,0 +1,29 @@
+<div class="login-container">
+  <mat-card>
+    <mat-card-title class="center"> Ingreso </mat-card-title>
+    <mat-card-content [formGroup]="formLogin">
+      <mat-form-field class="login-input">
+        <mat-label>Correo electrónico</mat-label>
+        <input
+          matInput
+          placeholder="Ej. user@domain.com"
+          formControlName="email"
+        />
+      </mat-form-field>
+      <mat-form-field class="login-input">
+        <mat-label>Contraseña</mat-label>
+        <input type="password" matInput formControlName="password" />
+      </mat-form-field>
+    </mat-card-content>
+    <mat-card-actions class="center">
+      <button
+        mat-raised-button
+        color="primary"
+        (click)="login()"
+        [disabled]="formLogin.invalid || loading"
+      >
+        Ingresar
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div>
