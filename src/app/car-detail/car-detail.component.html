@@ -1,0 +1,23 @@
+<div [formGroup]="formCar" class="form-car">
+  <h1>Agregar auto</h1>
+  <mat-form-field class="car-input" appearance="fill">
+    <mat-label>Marca</mat-label>
+    <input matInput placeholder="Ej. Ford" formControlName="brand" />
+  </mat-form-field>
+  <mat-form-field class="car-input" appearance="fill">
+    <mat-label>Modelo</mat-label>
+    <input matInput placeholder="Ej. Fiesta" formControlName="model" />
+  </mat-form-field>
+  <mat-form-field class="car-input" appearance="fill">
+    <mat-label>Año</mat-label>
+    <input matInput placeholder="Ej. 2022" formControlName="year" />
+  </mat-form-field>
+  <button
+    mat-raised-button
+    color="primary"
+    [disabled]="formCar.invalid"
+    (click)="save()"
+  >
+    Guardar
+  </button>
+</div>

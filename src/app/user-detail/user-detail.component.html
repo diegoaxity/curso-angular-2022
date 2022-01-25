@@ -1,0 +1,16 @@
+<div class="center">
+  <mat-spinner *ngIf="loading"></mat-spinner>
+  <div *ngIf="!loading && user">
+    <h1>ID</h1>
+    <h3>{{ user?.id }}</h3>
+    <h1>Nombre</h1>
+    <h3>{{ user?.first_name }}</h3>
+    <h1>Apellido</h1>
+    <h3>{{ user?.last_name }}</h3>
+    <h1>Avatar</h1>
+    <img [src]="user?.avatar" />
+  </div>
+  <div>
+    <h1 *ngIf="!user && !loading">Usuario no encontrado</h1>
+  </div>
+</div>

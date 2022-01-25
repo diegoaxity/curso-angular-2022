@@ -1,3 +1,5 @@
 export const environment = {
-  production: true
+  apiUrl: 'https://reqres.in/api',
+  api2Url: 'https://super-rest.herokuapp.com/api',
+  production: true,
 };

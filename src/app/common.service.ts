@@ -6,6 +6,7 @@ import { Subject } from 'rxjs';
 })
 export class CommonService {
   loading = new Subject<boolean>();
+  message = new Subject<string>();
 
   constructor() {}
 }
